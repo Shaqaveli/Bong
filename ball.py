@@ -3,6 +3,7 @@ import random
 
 BALL_SPEED = 6
 
+
 class Ball(Turtle):
     def __init__(self, ball_speed):
         super().__init__()
@@ -11,7 +12,7 @@ class Ball(Turtle):
         self.ball_speed = ball_speed
         self.x_move = 0
         self.y_move = 0
-        self.reset()
+        self.reset_ball()
         self.pu()
 
     def move(self):
@@ -25,7 +26,7 @@ class Ball(Turtle):
     def bounce_x(self):
         self.x_move *= -1
 
-    def reset(self):
+    def reset_ball(self):
         self.goto(0, 0)
         rand_dir = random.choice([-1, 1])
         self.x_move = self.ball_speed * rand_dir
