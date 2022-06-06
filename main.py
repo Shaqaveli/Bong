@@ -59,12 +59,16 @@ while game_is_on:
         scoreboard.update_scoreboard()
         SCREEN_UPDATE_SPEED = 0.04
         ball.reset()
+        right_player.reset()
+        left_player.reset()
 
     if ball.xcor() < -390:
         scoreboard.right_goal()
         scoreboard.update_scoreboard()
         SCREEN_UPDATE_SPEED = 0.04
         ball.reset()
+        right_player.reset()
+        left_player.reset()
 
     if scoreboard.left_player_score == END_OF_GAME_SCORE or scoreboard.right_player_score == END_OF_GAME_SCORE:
         scoreboard.game_over()
