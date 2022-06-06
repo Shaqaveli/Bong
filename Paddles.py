@@ -12,7 +12,9 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=5)
         self.pu()
         self.setheading(UP)
-        self.setpos(x_pos, y_pos)
+        self.starting_x = x_pos
+        self.starting_y = y_pos
+        self.reset()
 
 
     def up(self):
@@ -20,3 +22,6 @@ class Paddle(Turtle):
 
     def down(self):
         self.backward(PADDLE_MOVE_DISTANCE)
+
+    def reset(self):
+        self.setpos(self.starting_x, self.starting_y)
