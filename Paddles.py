@@ -14,8 +14,7 @@ class Paddle(Turtle):
         self.setheading(UP)
         self.starting_x = x_pos
         self.starting_y = y_pos
-        self.reset()
-
+        self.reset_paddle()
 
     def up(self):
         self.forward(PADDLE_MOVE_DISTANCE)
@@ -23,5 +22,5 @@ class Paddle(Turtle):
     def down(self):
         self.backward(PADDLE_MOVE_DISTANCE)
 
-    def reset(self):
+    def reset_paddle(self):
         self.setpos(self.starting_x, self.starting_y)
